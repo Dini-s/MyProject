@@ -1,1 +1,50 @@
-rfyhjh rjrgr uruhb oo
+interface MediaFile{
+	String getFormat();
+	void paly();
+	void pause();
+	void stop();
+}
+
+interface Subtitles{
+	void displaySubtitles();
+}
+
+class MP3File implements MediaFile{
+	@override
+	public String getFormat(){
+		return "mp3";
+	}
+	@override
+	public void play(){
+		System.out.println("Playing MP3 audio....");
+	}
+	@override
+	public void pause(){
+		System.out.println("Pausing MP3...");
+	}
+	@override
+	public void stop(){
+		System.out.println("Stopping MP3...");
+	}
+}
+
+class MP4File implements MediaFile,Subtitles{
+	@override
+	public String getFormat(){
+		return "mp4";
+	}
+	@override
+	public void play(){
+		System.out.println("Playing MP4 audio....");
+	}
+	@override
+	public void pause(){
+		System.out.println("Pausing MP4...");
+	}
+	@override
+	public void stop(){
+		System.out.println("Stopping MP4...");
+	}
+	@override
+	public void displaySubtitles(){
+		System.out.
